@@ -1,4 +1,5 @@
 import React from 'react';
+import {View} from 'react-native';
 
 import Bug from '../../assets/types/bug.svg';
 import Dark from '../../assets/types/dark.svg';
@@ -19,9 +20,9 @@ import Rock from '../../assets/types/rock.svg';
 import Steel from '../../assets/types/steel.svg';
 import Water from '../../assets/types/water.svg';
 
-const styles = {width: 20, height: 20};
+const styles = {width: 10, height: 10};
 
-const Icons = ({type}) => {
+const getIcon = type => {
   switch (type) {
     case 'Bug':
       return <Bug {...styles} />;
@@ -42,7 +43,7 @@ const Icons = ({type}) => {
     case 'Ghost':
       return <Ghost {...styles} />;
     case 'Grass':
-      return <Grass {...styles} fill={'#78c84f'} />;
+      return <Grass {...styles} />;
     case 'Ground':
       return <Ground {...styles} />;
     case 'Ice':
@@ -64,6 +65,23 @@ const Icons = ({type}) => {
     default:
       return <></>;
   }
+};
+
+const Icons = ({type}) => {
+  const icon = getIcon(type);
+  return (
+    <View
+      style={{
+        backgroundColor: 'yellowgreen',
+        width: 20,
+        height: 20,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+      {icon}
+    </View>
+  );
 };
 
 export default Icons;
