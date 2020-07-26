@@ -7,8 +7,16 @@ export const GET_POKEMONS = gql`
     pokemons(first: $first) {
       id
       name
-      image
-      maxHP
+      weight {
+        minimum
+        maximum
+      }
+      height {
+        minimum
+        maximum
+      }
+      classification
+      types
       attacks {
         special {
           name
@@ -16,6 +24,14 @@ export const GET_POKEMONS = gql`
           damage
         }
       }
+      weaknesses
+      evolutions {
+        id
+        name
+        types
+      }
+      maxHP
+      image
     }
   }
 `;
