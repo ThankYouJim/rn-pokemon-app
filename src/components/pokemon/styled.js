@@ -40,6 +40,7 @@ export const Container = styled.View`
 export const Header = styled.View`
   align-items: stretch;
   padding: 16px;
+  padding-bottom: 0;
 `;
 
 export const TitleContainer = styled.View`
@@ -75,7 +76,7 @@ export const ImageBox = styled.View`
 `;
 
 export const Image = styled.Image`
-  min-height: 160px;
+  min-height: 170px;
   resize-mode: contain;
 `;
 
@@ -93,6 +94,7 @@ export const CaptionText = styled.Text`
 export const Body = styled.View`
   padding: 4px;
   flex: 1;
+  border: 2px solid blue;
 `;
 
 export const Moves = styled.ScrollView``;

@@ -10,8 +10,7 @@ export const Container = styled.View`
   padding: 4px;
 `;
 
-export const IconView = styled.View`
-`;
+export const IconView = styled.View``;
 
 export const Name = styled.Text`
   flex: 1;
