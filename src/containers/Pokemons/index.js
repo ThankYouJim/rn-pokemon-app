@@ -7,7 +7,7 @@ import {ScrollableV} from './styled';
 
 export function Pokemons() {
   const {data: {pokemons = []} = {}} = useQuery(GET_POKEMONS, {
-    variables: {first: 9},
+    variables: {first: 3},
   });
 
   return (

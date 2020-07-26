@@ -65,7 +65,9 @@ const Pokemon = ({pokemon}) => {
           <Moves>
             {allAttacks.map((atk, index) => {
               const {type, name, damage} = atk;
-              return <Move key={index} type={type} name={name} damage={damage} />;
+              return (
+                <Move key={index} type={type} name={name} damage={damage} />
+              );
             })}
           </Moves>
         </Body>

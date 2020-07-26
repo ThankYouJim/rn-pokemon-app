@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {Container, IconView, Name, Damage} from './styled';
+import Icons from '../Icons';
 
 export const Move = ({type, name, damage}) => {
   return (
     <Container>
       <IconView>
-        <Text>{type}</Text>
+        <Icons type={type} />
       </IconView>
       <Name>{name}</Name>
       <Damage>{damage}</Damage>
