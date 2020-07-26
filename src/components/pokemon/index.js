@@ -4,11 +4,12 @@ import {
   Border,
   Container,
   Header,
-  Title,
+  TitleContainer,
+  Name,
   TopRight,
-  Label,
-  Numerals,
-  Window,
+  HPLabel,
+  HPValue,
+  ImageBox,
   Image,
   Captions,
   CaptionText,
@@ -32,25 +33,28 @@ const Pokemon = ({pokemon}) => {
     <Border>
       <Container>
         <Header>
-          <Title>{name}</Title>
-          <TopRight>
-            <Label>Max HP</Label>
-            <Numerals>{maxHP}</Numerals>
-            <Text>{types}</Text>
-          </TopRight>
-        </Header>
-        <Window>
-          <Image
-            source={{
-              uri: image,
-            }}
-          />
+          <TitleContainer>
+            <Name>{name}</Name>
+            <TopRight>
+              <HPLabel>Max HP</HPLabel>
+              <HPValue>{maxHP}</HPValue>
+              {/* <Text>{types}</Text> */}
+            </TopRight>
+          </TitleContainer>
+          <ImageBox>
+            <Image
+              source={{
+                uri: image,
+              }}
+            />
+          </ImageBox>
           <Captions>
             <CaptionText>
-              {classification}. Length: {height.maximum}, Weight: {weight.maximum}.
+              {classification}. Length: {height.maximum}, Weight:{' '}
+              {weight.maximum}.
             </CaptionText>
           </Captions>
-        </Window>
+        </Header>
       </Container>
     </Border>
   );
