@@ -4,7 +4,7 @@ import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from '@apollo/react-hooks';
 // import {Theme} from 'teaset';
 
-import {Pokemons} from './containers/Pokemons';
+import {Pokemons} from './src/containers/Pokemons';
 
 const App = () => {
   // Theme.set(Theme.themes.violet);
