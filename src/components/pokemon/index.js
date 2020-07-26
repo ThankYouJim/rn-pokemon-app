@@ -13,6 +13,7 @@ import {
   Image,
   Captions,
   CaptionText,
+  Body,
 } from './styled';
 
 const Pokemon = ({pokemon}) => {
@@ -28,6 +29,8 @@ const Pokemon = ({pokemon}) => {
     maxHP,
     image,
   } = pokemon;
+  const fast = attacks ? attacks.fast : [];
+  const special = attacks ? attacks.special : [];
 
   return (
     <Border>
@@ -35,11 +38,11 @@ const Pokemon = ({pokemon}) => {
         <Header>
           <TitleContainer>
             <Name>{name}</Name>
-            <TopRight>
-              <HPLabel>Max HP</HPLabel>
-              <HPValue>{maxHP}</HPValue>
-              {/* <Text>{types}</Text> */}
-            </TopRight>
+            {/* <TopRight> */}
+            {/* <HPLabel>Max HP</HPLabel> */}
+            {/* <HPValue>{maxHP}</HPValue> */}
+            {/* <Text>{types}</Text> */}
+            {/* </TopRight> */}
           </TitleContainer>
           <ImageBox>
             <Image
@@ -55,6 +58,12 @@ const Pokemon = ({pokemon}) => {
             </CaptionText>
           </Captions>
         </Header>
+        <Body>
+          {special.map((sp, index) => (
+            // TODO;
+            <Text key={index}>{sp.name}</Text>
+          ))}
+        </Body>
       </Container>
     </Border>
   );

@@ -49,6 +49,7 @@ export const TitleContainer = styled.View`
 `;
 
 export const Name = styled(MainText)`
+  font-size: 20px;
   font-weight: bold;
 `;
 
@@ -74,7 +75,7 @@ export const ImageBox = styled.View`
 `;
 
 export const Image = styled.Image`
-  min-height: 150px;
+  min-height: 160px;
   resize-mode: contain;
 `;
 
@@ -89,4 +90,6 @@ export const CaptionText = styled.Text`
   font-size: 12px;
 `;
 
-export const Body = styled.View``;
+export const Body = styled.View`
+  padding: 4px;
+`;

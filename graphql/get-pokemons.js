@@ -18,9 +18,14 @@ export const GET_POKEMONS = gql`
       classification
       types
       attacks {
-        special {
-          name
+        fast {
           type
+          name
+          damage
+        }
+        special {
+          type
+          name
           damage
         }
       }
