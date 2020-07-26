@@ -92,4 +92,7 @@ export const CaptionText = styled.Text`
 
 export const Body = styled.View`
   padding: 4px;
+  flex: 1;
 `;
+
+export const Moves = styled.ScrollView``;

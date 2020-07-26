@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import {Move} from '../Move';
 import {
   Border,
   Container,
@@ -14,6 +15,7 @@ import {
   Captions,
   CaptionText,
   Body,
+  Moves,
 } from './styled';
 
 const Pokemon = ({pokemon}) => {
@@ -31,6 +33,7 @@ const Pokemon = ({pokemon}) => {
   } = pokemon;
   const fast = attacks ? attacks.fast : [];
   const special = attacks ? attacks.special : [];
+  const allAttacks = [...fast, ...special].sort((a, b) => a.damage - b.damage);
 
   return (
     <Border>
@@ -59,10 +62,12 @@ const Pokemon = ({pokemon}) => {
           </Captions>
         </Header>
         <Body>
-          {special.map((sp, index) => (
-            // TODO;
-            <Text key={index}>{sp.name}</Text>
-          ))}
+          <Moves>
+            {allAttacks.map((atk, index) => {
+              const {type, name, damage} = atk;
+              return <Move key={index} type={type} name={name} damage={damage} />;
+            })}
+          </Moves>
         </Body>
       </Container>
     </Border>
