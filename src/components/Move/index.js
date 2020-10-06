@@ -1,15 +1,15 @@
 import React from 'react';
 import {Container, IconView, Name, Damage} from './styled';
-import Icons from '../Icons';
+// import Icons from '../Icons';
 
 export const Move = ({type, name, damage}) => {
   return (
     <Container>
-      <IconView>
+      {/* <IconView>
         <Icons type={type} />
       </IconView>
       <Name>{name}</Name>
-      <Damage>{damage}</Damage>
+      <Damage>{damage}</Damage> */}
     </Container>
   );
 };
