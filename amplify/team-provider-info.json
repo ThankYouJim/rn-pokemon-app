@@ -10,6 +10,11 @@
       "StackName": "amplify-rnpokemonmobileapp-dev-93610",
       "StackId": "arn:aws:cloudformation:us-east-1:915000072434:stack/amplify-rnpokemonmobileapp-dev-93610/58050160-0824-11eb-8d00-1230a5204572",
       "AmplifyAppId": "d2uev5h7as4jhs"
+    },
+    "categories": {
+      "auth": {
+        "rnpokemonmobileapp31cfc59b": {}
+      }
     }
   }
 }

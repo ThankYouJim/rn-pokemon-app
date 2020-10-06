@@ -2,13 +2,19 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from '@apollo/react-hooks';
-// import {Theme} from 'teaset';
+import Amplify from 'aws-amplify';
+import awsExports from './aws-exports';
 
 import {Pokemons} from './src/containers/Pokemons';
 
-const App = () => {
-  // Theme.set(Theme.themes.violet);
+Amplify.configure({
+  ...awsExports,
+  Analytics: {
+    disabled: true,
+  },
+});
 
+const App = () => {
   const client = new ApolloClient({
     uri: 'https://graphql-pokemon.now.sh',
   });
